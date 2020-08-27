@@ -1,6 +1,6 @@
 # CLOCK
 
-A JS functional programming example.
+Composing functions in JS.
 
 ## Description
 
@@ -10,22 +10,22 @@ The clock needs to display hours, minutes, seconds, and time of day in civilian 
 
 Value functions (self explanatory):
 
-- *oneSecond*: 1000  ms
-- *getCurrentTime*: get curren time
-- *clear*: clear console
-- *log*: writes message on the console
+- _oneSecond_: 1000 ms
+- _getCurrentTime_: get curren time
+- _clear_: clear console
+- _log_: writes message on the console
 
- Data transformation functions:
+Data transformation functions:
 
-- *serializeClockTime*: Takes a date object and returns an object for clock time that contains hours, minutes, and seconds.
-- *civilianHours*: Takes the clock time object and returns an object where hours are converted to civilian time. For example: 1300 becomes 1:00.
-- *appendAMPM*: Takes the clock time object and appends time of day (AM or PM) to that object.
+- _serializeClockTime_: Takes a date object and returns an object for clock time that contains hours, minutes, and seconds.
+- _civilianHours_: Takes the clock time object and returns an object where hours are converted to civilian time. For example: 1300 becomes 1:00.
+- _appendAMPM_: Takes the clock time object and appends time of day (AM or PM) to that object.
 
 Higher-order functions:
 
-- *display*: Takes a target function and returns a function that will send a time to the target. In this example, the target will be console.log.
-- *formatClock*: Takes a template string and uses it to return clock time formatted based on the criteria from the string. In this example, the template is “hh:mm:ss tt”. From there, formatClock will replace the placeholders with hours, minutes, seconds, and time of day.
-- *prependZero*: Takes an object’s key as an argument and prepends a zero to the value stored under that object’s key. It takes in a key to a specific field and prepends values with a zero if the value is less than 10.
+- _display_: Takes a target function and returns a function that will send a time to the target. In this example, the target will be console.log.
+- _formatClock_: Takes a template string and uses it to return clock time formatted based on the criteria from the string. In this example, the template is “hh:mm:ss tt”. From there, formatClock will replace the placeholders with hours, minutes, seconds, and time of day.
+- _prependZero_: Takes an object’s key as an argument and prepends a zero to the value stored under that object’s key. It takes in a key to a specific field and prepends values with a zero if the value is less than 10.
 
 ## Installation
 

@@ -1,12 +1,12 @@
 {
-  "name": "js-starter",
+  "name": "clock",
   "version": "1.0.0",
   "description": "JS Project",
-  "main": "app/index.js",
+  "main": "clock.js",
   "scripts": {
     "test": "jest --config ./jest.config.json --watchAll",
     "test:coverage": "jest --config ./jest.config.json --coverage || open coverage/lcov-report/index.js",
-    "app": "node src/index.js",
+    "clock": "node clock",
     "clean": "rm -rf .cache dist"
   },
   "keywords": [],
