@@ -1,9 +1,10 @@
 const {
-  serializeClockTime,
   convertToCivilianTime,
   prependZero,
   doubleDigits,
-} = require("./clock");
+} = require("./adapters");
+
+const { serializeClockTime } = require("./domain");
 
 const testDate = new Date(Date.parse("2020-08-04T20:08:04.052Z"));
 
