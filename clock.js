@@ -7,8 +7,8 @@ const log = (message) => console.log(message);
 
 const serializeClockTime = (date) => ({
   year: date.getFullYear(),
-  month: date.getMonth(),
-  day: date.getDay(),
+  month: date.getMonth() + 1,
+  day: date.getDate(),
   hours: date.getHours(),
   minutes: date.getMinutes(),
   seconds: date.getSeconds(),
@@ -36,10 +36,13 @@ const formatClock = (format) => (time) =>
     .replace("ss", time.seconds)
     .replace("tt", time.ampm);
 
-const prependZero = (key) => (clockTime) => ({
-  ...clockTime,
-  key: clockTime[key] < 10 ? "0" + clockTime[key] : clockTime[key],
-});
+const prependZero = (key) => (clockTime) => {
+  const formated = {
+    ...clockTime,
+  };
+  formated[key] = clockTime[key] < 10 ? "0" + clockTime[key] : clockTime[key];
+  return formated;
+};
 
 const convertToCivilianTime = (clockTime) =>
   compose(appendAMPM, civilianHours)(clockTime);

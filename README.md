@@ -1,4 +1,4 @@
-# CLOCK
+# Clock
 
 Composing functions in JS.
 
